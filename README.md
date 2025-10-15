@@ -98,3 +98,32 @@ A compromised internal host (172.16.100.55) reported network scan results to an 
 **Investigation Date:** Lab Environment  
 **Tools:** Docket, Wireshark  
 **Analyst:** Paige Alfred
+
+---
+
+## Investigation Screenshots
+
+### Lab Challenge
+![Challenge Question](Network-Scan-Challenge.png)
+
+*Challenge: Identify the last IP that scan results were sent to before connection closed*
+
+### Investigation Hint
+![Analysis Hint](Network-Scan-Hint.png)
+
+*Hint: Query PCAP for this session and follow TCP stream to reveal entire conversation*
+
+### Docket Query Configuration
+![Docket PCAP Extraction](Network-Scan-Docket-Config.png)
+
+*Configuring Docket query parameters: time range, hosts (172.16.100.55 and 103.69.117.6), protocol*
+
+### Wireshark Follow TCP Stream
+![Follow TCP Stream Menu](Network-Scan-Wireshark-Follow.png)
+
+*Wireshark interface showing Follow TCP Stream option for session reconstruction*
+
+### TCP Stream Analysis
+![TCP Stream Content](Network-Scan-TCP-Stream.png)
+
+*Complete TCP stream showing scan results - final IP identified: 172.16.100.253*
